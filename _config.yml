@@ -1,37 +1,150 @@
-# 网站基本配置
-title: 张师源的个人主页
-description: 香港大学研究者 | 学术成果与联系方式
-repository: SyuanZhang/SyuanZhang.github.io
-url: https://syuanzhang.github.io
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
 
-# 作者信息
+# Site Settings
+title                    : "张师源 | 香港大学"
+description              : "生成式人工智能 · 计算机网络 · 移动计算 | The University of Hong Kong"
+repository               : "SyuanZhang/SyuanZhang.github.io"
+google_scholar_stats_use_cdn : true  # 建议开启 CDN，确保内地可访问学术数据
+
+# google analytics
+google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+
+# SEO Related
+google_site_verification :  # get from Google Search Console
+bing_site_verification   :  # get from Bing Webmaster
+baidu_site_verification  :  # get from Baidu Ziyuan
+
+# Site Author
 author:
-  name: 张师源
-  email: shiyuanzhang@connect.hku.hk
-  affiliation: 香港大学
-  location: 香港
-  links:
-    - label: Google Scholar
-      url: https://scholar.google.com/citations?user=cbSrXFoAAAAJ
+  name             : "张师源"
+  avatar           : "images/android-chrome-512x512.png"  # 建议使用高清圆形头像（512x512）
+  bio              : "香港大学"
+  location         : "香港 薄扶林"
+  employer         : "The University of Hong Kong"
+  pubmed           : 
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=cbSrXFoAAAAJ"
+  email            : "shiyuanzhang@connect.hku.hk"  # 更新为 HKU 邮箱
+  researchgate     : 
+  uri              : 
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "SyuanZhang"
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      : 
+  lastfm           :
+  linkedin         : 
+  dblp             : 
+  orcid            : "https://orcid.org/0009-0000-3216-2256"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : 
+  steam            :
+  tumblr           :
+  twitter          : 
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
 
-# Google Analytics（可选）
-# google_analytics_id: "G-XXXXXXXXXX"
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - docs
+  - google_scholar_crawler
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .github
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# Google Scholar 统计配置
-google_scholar_stats_use_cdn: true
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-# SEO 配置（可选）
-# google_site_verification: "..."
-# bing_site_verification: "..."
-# baidu_site_verification: "..."
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
-# 语言（用于 SEO 和结构化数据）
-language: zh-Hans
+# Defaults
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: false
 
-# 构建设置
-remote_theme: academicpages/academicpages.github.io
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+timezone: Asia/Shanghai
+
+# Plugins
 plugins:
-  - jekyll-include-cache
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-redirect-from
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
